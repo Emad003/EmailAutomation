@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIEE Bulk Mail Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="content-container">
+            
+            <div class="dashboard">
+                <header class="dashboard-header">
+                    <h1>Email Automation System</h1>
+                    <p class="tagline">Send personalized campaigns easily</p>
+                </header>
+
+                <div class="form-group">
+                    <label for="email">Sender Gmail</label>
+                    <input type="email" id="email" placeholder="example@gmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Gmail App Password</label>
+                    <input type="password" id="password" placeholder="App Password">
+                </div>
+
+                <div class="form-group">
+                    <label>Upload CSV File</label>
+                    <div class="file-upload">
+                        <label for="csv" class="upload-btn">📂 Select CSV</label>
+                        <span id="fileName">No file selected</span>
+                        <input type="file" id="csv" hidden>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Delay (seconds)</label>
+                    <div class="delay-control">
+                        <input type="range" id="delaySlider" min="1" max="60" value="10">
+                        <input type="number" id="delay" value="10" min="1" max="60">
+                        <span class="sec-label">sec</span>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn start" onclick="start()">🚀 Start Campaign</button>
+                    <button class="btn stop" onclick="stop()">⛔ Stop Campaign</button>
+                </div>
+
+                <div class="progress-box">
+                    <div class="progress-bar" id="bar"></div>
+                </div>
+
+                <div class="console" id="status">Waiting for campaign start...</div>
+            </div> <p class="designer-credit">System Designed by <b>Emad Fazal</b></p>
+
+        </div> </div> <script src="script.js"></script>
+</body>
+</html>
