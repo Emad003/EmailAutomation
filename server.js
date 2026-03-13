@@ -175,7 +175,8 @@ email: person.email,
 status: "failed"
 });
 
-console.log("❌ Failed:",person.email);
+console.log("❌ Failed:", person.email);
+console.log("Error:", err.message);
 
 }
 
