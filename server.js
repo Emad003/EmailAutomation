@@ -26,6 +26,7 @@ function delay(ms){
 return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
 /* START CAMPAIGN */
 
 app.post("/start", upload.single("csv"), async (req,res)=>{
@@ -39,16 +40,14 @@ const file = req.file.path;
 const recipients=[];
 
 /* transporter */
-
 const transporter = nodemailer.createTransport({
-host: "smtp.gmail.com",
-port: 587,
-secure: false,
-auth: {
-user: email,
-pass: password
-},
-family: 4
+  host: "smtp-relay.brevo.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: "a4d7b1001@smtp-brevo.com",
+    pass: "ATUdDgaXSOvyCfrW"
+  }
 });
 
 /* read csv */
