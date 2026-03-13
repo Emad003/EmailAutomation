@@ -41,14 +41,13 @@ const recipients=[];
 /* transporter */
 
 const transporter = nodemailer.createTransport({
-host: "smtp.gmail.com",
-port: 587,
-secure: false,
-auth: {
-user: email,
-pass: password
-},
-family: 4
+  host: "smtp-relay.brevo.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: "a4d7b1001@smtp-brevo.com",
+    pass: "ATUdDgaXSOvyCfrW"
+  }
 });
 
 /* read csv */
