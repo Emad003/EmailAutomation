@@ -41,14 +41,14 @@ const recipients=[];
 /* transporter */
 
 const transporter = nodemailer.createTransport({
-
-service:"gmail",
-
-auth:{
+host: "smtp.gmail.com",
+port: 587,
+secure: false,
+auth: {
 user: email,
 pass: password
-}
-
+},
+family: 4
 });
 
 /* read csv */
